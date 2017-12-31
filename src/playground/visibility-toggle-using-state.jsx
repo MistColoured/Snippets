@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class VisibilityToggleInterview extends Component {
+class VisibilityInterview extends Component {
   constructor(props) {
     super(props);
     this.handleToggle = this.handleToggle.bind(this);
@@ -11,13 +11,12 @@ class VisibilityToggleInterview extends Component {
   }
   handleToggle() {
     this.setState((prevState) => ({
-      visibility: !prevState.visibility,
+      visibility: !prevState.visibility
     }));
   }
   render() {
     return (
       <div>
-        <h1>Visibility Interview</h1>
         <button onClick={this.handleToggle}>{this.state.visibility ? 'Hide' : 'Show'}</button>
         {this.state.visibility && <p>ZZ Top</p>}
       </div>
@@ -25,4 +24,4 @@ class VisibilityToggleInterview extends Component {
   }
 }
 
-ReactDOM.render(<VisibilityToggleInterview />, document.getElementById('app'));
+ReactDOM.render(<VisibilityInterview />, document.getElementById('app'));

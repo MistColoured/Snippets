@@ -1,26 +1,23 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-class VisibilityTogglenterview extends Component {
+class VisibilityToggleInterview extends Component {
   state = {
-    visibility: false,
+    visibility: false
   }
   handleToggle = () => {
     this.setState((prevState) => ({
-      visibility: !prevState.visibility,
+      visibility: !prevState.visibility
     }))
-    console.log(this.state.visibility);
   }
   render() {
-    return (
+    return(
       <div>
-        <button onClick={this.handleToggle}>
-          {this.state.visibility ? 'Hide' : 'Show'}
-        </button>
-          {this.state.visibility && <p>ZZ Top</p>}
+        <button onClick={this.handleToggle}>{this.state.visibility ? 'Hide' : 'Show'}</button>
+        {this.state.visibility && <p>ZZ Top</p>}
       </div>
     );
   }
 }
 
-ReactDOM.render(<VisibilityTogglenterview />, document.getElementById('app'));
+ReactDOM.render(<VisibilityToggleInterview />, document.getElementById('app'));

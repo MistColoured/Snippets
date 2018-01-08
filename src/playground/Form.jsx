@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 
-import react-modal from 'react-modal';
+import OptionModal from './OptionModal.jsx';
 
 class Form extends Component {
   state = {
-    value: ''
+    value: '',
+    selectedOption: undefined
   }
   handleChange = (e) => {
     this.setState({
@@ -15,6 +16,7 @@ class Form extends Component {
     e.preventDefault();
     console.log(`Submitted: ${this.state.value}`);
     this.setState({
+      selectedOption: this.state.value,
       value: ''
     })
   }
@@ -26,6 +28,9 @@ class Form extends Component {
           <input type="text" value={this.state.value.toLowerCase()} onChange={this.handleChange} />
           <input type="submit" />
         </form>
+        <OptionModal
+        selectedOption={this.state.selectedOption}
+        />
       </div>
     );
   }

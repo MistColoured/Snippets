@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 
-class App extends React.Component {
+class App extends Component {
   state = {
     clickCounter: 0,
     currentTimestamp: new Date(),

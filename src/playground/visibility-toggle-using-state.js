@@ -21,4 +21,4 @@ class VisibilityToggleInterview extends Component {
   }
 }
 
-ReactDOM.render(<VisibilityToggleInterview />, document.getElementById('app'));
+export default VisibilityToggleInterview;

@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/playground/visibility-toggle-using-state.jsx',
+  entry: './app.jsx',
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js'

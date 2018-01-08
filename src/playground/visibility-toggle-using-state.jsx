@@ -11,10 +11,11 @@ class VisibilityToggleInterview extends Component {
     }))
   }
   render() {
-    return(
+    const { visibility } = this.state
+    return (
       <div>
-        <button onClick={this.handleToggle}>{this.state.visibility ? 'Hide' : 'Show'}</button>
-        {this.state.visibility && <p>ZZ Top</p>}
+        <button onClick={this.handleToggle}>{visibility ? 'Hide' : 'Show'}</button>
+        {visibility && <p>ZZ Top</p>}
       </div>
     );
   }

@@ -11,15 +11,18 @@ class Form extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`This was submitted: ${this.state.value}`);
+    console.log(`Submitted: ${this.state.value}`);
+    this.setState({
+      value: ''
+    })
   }
   render() {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-            Name:
+          Name:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
-          <input type="submit" value="Submit" />
+          <input type="submit" />
         </form>
       </div>
     );

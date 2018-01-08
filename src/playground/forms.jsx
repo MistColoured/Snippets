@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import react-modal from 'react-modal';
+
 class Form extends Component {
   state = {
     value: ''
@@ -21,7 +23,7 @@ class Form extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           Name:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
+          <input type="text" value={this.state.value.toLowerCase()} onChange={this.handleChange} />
           <input type="submit" />
         </form>
       </div>

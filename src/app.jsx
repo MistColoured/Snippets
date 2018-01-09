@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import App from './playground/Form.jsx';
+import App from './playground/Counter.jsx';
 import './styles/styles.scss';
 
 ReactDOM.render(<App />, document.getElementById('app'));

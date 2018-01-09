@@ -20,6 +20,11 @@ class Form extends Component {
       value: ''
     })
   }
+  handleCloseModal = () => {
+    this.setState({
+      selectedOption: ''
+    })
+  }
   render() {
     return (
       <div>
@@ -30,6 +35,7 @@ class Form extends Component {
         </form>
         <OptionModal
         selectedOption={this.state.selectedOption}
+        handleClose={this.handleCloseModal}
         />
       </div>
     );

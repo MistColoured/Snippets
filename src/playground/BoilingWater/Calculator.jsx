@@ -13,11 +13,13 @@ class Calculator extends Component {
     this.setState({
       scale: 'c', temperature
     });
+    console.log(this.state.scale, this.state.temperature)
   }
   handleFahrenheitChange = (temperature) => {
     this.setState({
       scale: 'f', temperature
     });
+    console.log(this.state.scale, this.state.temperature)
   }
   render() {
     const scale = this.state.scale;

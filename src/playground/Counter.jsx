@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-class Counter extends Component {
+class CounterInterview extends Component {
   state = {
-    count: 107
+    count: 0
   }
   handlePlus = () => {
     this.setState((prevState) => ({
@@ -16,14 +16,13 @@ class Counter extends Component {
   }
   handleReset = () => {
     this.setState(() => ({
-      count: 107
+      count: 0
     }))
   }
   render() {
-    const { count } = this.state
     return (
       <div>
-        Count: {count}
+        Count: {this.state.count}
         <button onClick={this.handlePlus}>+</button>
         <button onClick={this.handleMinus}>-</button>
         <button onClick={this.handleReset}>Reset</button>
@@ -32,4 +31,4 @@ class Counter extends Component {
   }
 }
 
-export default Counter;
+export default CounterInterview;

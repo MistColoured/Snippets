@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 
 class ToggleVisibility extends Component {
-  state = {
-    visibility: false
+  constructor(props) {
+    super(props);
+    this.handleToggle = this.handleToggle.bind(this);
+    this.state = {
+      visibility: false,
+    };
   }
-  handleToggle = () => {
+  handleToggle() {
     this.setState((prevState) => ({
-      visibility: !prevState.visibility
-    }))
+      visibility: !prevState.visibility,
+    }));
   }
   render() {
     return (
@@ -15,7 +19,7 @@ class ToggleVisibility extends Component {
         <button onClick={this.handleToggle}>
           {this.state.visibility ? 'Hide' : 'Show'}
         </button>
-        {this.state.visibility && <p>ZZ Top</p>}
+          {this.state.visibility && <p>ZZ Top</p>}
       </div>
     );
   }

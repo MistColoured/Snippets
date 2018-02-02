@@ -10,10 +10,14 @@ class CounterInterview extends Component {
     }))
   }
   handleMinus = () => {
-    console.log('Minus');
+    this.setState((prevState) => ({
+      count: prevState.count - 1
+    }))
   }
   handleReset = () => {
-    console.log('Reset');
+    this.setState(() => ({
+      count: 0
+    }))
   }
   render() {
     return (

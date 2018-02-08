@@ -5,7 +5,7 @@ class CounterInterview extends Component {
     count: 0
   }
   handlePlus = () => {
-    this.setState((prevState) => ({
+    this.setState(prevState => ({
       count: prevState.count + 1
     }))
   }

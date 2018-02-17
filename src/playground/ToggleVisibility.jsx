@@ -9,9 +9,9 @@ class ToggleVisibility extends Component {
     };
   }
   handleToggle() {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       visibility: !prevState.visibility,
-    }))
+    }));
   }
   render() {
     return (
@@ -22,5 +22,6 @@ class ToggleVisibility extends Component {
     );
   }
 }
+
 
 export default ToggleVisibility;

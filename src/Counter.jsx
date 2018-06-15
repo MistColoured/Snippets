@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 
 class CounterInterview extends Component {
   state = {
-    count: 0,
-  }
+    count: 15,
+  };
   handlePlus = () => {
-    this.setState((prevState) => ({
-      count: prevState.count + 1
-    }))
-  }
+    this.setState(prevState => ({
+      count: prevState.count + 1,
+    }));
+  };
   render() {
     return (
       <div>
-        Count: {this.state.count}
-        <button onClick={this.handlePlus}>+</button>
+        <button onClick={this.handlePlus}>{this.state.count}</button>
       </div>
     );
   }

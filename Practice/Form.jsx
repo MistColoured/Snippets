@@ -5,25 +5,25 @@ import OptionModal from './OptionModal.jsx';
 class Form extends Component {
   state = {
     value: '',
-    selectedOption: undefined
+    selectedOption: undefined,
   }
   handleChange = (e) => {
     this.setState({
-      value: e.target.value
-    })
+      value: e.target.value,
+    });
   }
   handleSubmit = (e) => {
     e.preventDefault();
     console.log(`Submitted: ${this.state.value}`);
     this.setState({
       selectedOption: this.state.value,
-      value: ''
-    })
+      value: '',
+    });
   }
   handleCloseModal = () => {
     this.setState({
-      selectedOption: ''
-    })
+      selectedOption: '',
+    });
   }
   render() {
     return (
@@ -34,8 +34,8 @@ class Form extends Component {
           <input type="submit" />
         </form>
         <OptionModal
-        selectedOption={this.state.selectedOption}
-        handleClose={this.handleCloseModal}
+          selectedOption={this.state.selectedOption}
+          handleClose={this.handleCloseModal}
         />
       </div>
     );

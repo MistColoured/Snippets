@@ -7,19 +7,19 @@ import toFahrenheit from './toFahrenheit';
 
 class Calculator extends Component {
   state = {
-    temperature: '', scale: 'c'
+    temperature: '', scale: 'c',
   }
   handleCelsiusChange = (temperature) => {
     this.setState({
-      scale: 'c', temperature
+      scale: 'c', temperature,
     });
-    console.log(this.state.scale, this.state.temperature)
+    console.log(this.state.scale, this.state.temperature);
   }
   handleFahrenheitChange = (temperature) => {
     this.setState({
-      scale: 'f', temperature
+      scale: 'f', temperature,
     });
-    console.log(this.state.scale, this.state.temperature)
+    console.log(this.state.scale, this.state.temperature);
   }
   render() {
     const scale = this.state.scale;

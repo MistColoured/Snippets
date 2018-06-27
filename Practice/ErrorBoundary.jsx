@@ -10,27 +10,33 @@ class ErrorBoundary extends Component {
     // Display fallback UI
     this.setState({
       hasError: true,
-      errorInfo: errorInfo,
+      errorInfo,
     });
     // You can also log the error to an error reporting service
   }
 
   render() {
-    if (this.state.hasError) {
+    const { hasError, error, errorInfo } = this.state;
+    // TODO: Use propTypes on children
+    // eslint-disable-next-line react/prop-types
+    const { children } = this.props;
+    if (hasError) {
       // You can render any custom fallback UI
       return (
         <div>
-          <h2>Something went wrong.</h2>
+          <h2>
+            Something went wrong.
+          </h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
+            {error && error.toString()}
             <br />
-            {this.state.errorInfo.componentStack}
+            {errorInfo.componentStack}
           </details>
         </div>
       );
     }
     // Normally, just render children
-    return this.props.children;
+    return children;
   }
 }
 

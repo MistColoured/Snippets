@@ -1,11 +1,11 @@
 import React from 'react';
 
 import ErrorBoundary from './ErrorBoundary';
-import Clock from './MouseMover';
+import DisplayComponent from './MouseMover';
 
 const ErrorWrapper = () => (
   <ErrorBoundary>
-    <Clock />
+    <DisplayComponent />
   </ErrorBoundary>
 );
 

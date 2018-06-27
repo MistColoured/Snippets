@@ -1,27 +1,13 @@
-import React, { Component, Fragment } from 'react';
+import React from 'react';
 
 import ErrorBoundary from './ErrorBoundary';
-import Clock from './Clock';
+import Clock from './MouseMover';
 
-class ErrorWrapper extends Component {
-  render() {
-    return (
-      <Fragment>
-        <ErrorBoundary>
-          These two are in the same error boundary
-          <Clock />
-          <Clock />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          These two are seperate
-          <Clock />
-        </ErrorBoundary>
-        <ErrorBoundary>
-          <Clock />
-        </ErrorBoundary>
-      </Fragment >
-    );
-  }
-}
+const ErrorWrapper = () => (
+  <ErrorBoundary>
+    <Clock />
+  </ErrorBoundary>
+);
+
 
 export default ErrorWrapper;

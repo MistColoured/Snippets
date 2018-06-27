@@ -6,9 +6,10 @@ class Clock extends Component {
     click: 107,
   }
 
-
   componentDidMount = () => {
-    this.timerId = setInterval(() => { this.setState({ date: new Date() }); });
+    this.timerId = setInterval(() => {
+      this.setState({ date: new Date() });
+    });
   }
 
   handleClick = () => {
@@ -19,17 +20,18 @@ class Clock extends Component {
 
   render() {
     const { click, date } = this.state;
-    if (click === 112) {
-      throw new Error('Bugger');
-    }
+    if (click === 112) { throw new Error('I am definitely an error'); }
     return (
       <Fragment>
-        <button type="submit" onClick={this.handleClick}>
+        <button
+          type="submit"
+          onClick={this.handleClick}
+        >
           <h1>
-            { click }
+            {click}
           </h1>
           <h1>
-            { date.toLocaleTimeString() }
+            {date.toLocaleTimeString()}
           </h1>
         </button>
       </Fragment>

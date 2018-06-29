@@ -12,6 +12,6 @@ module.exports = {
     // Disabled just while learning
     'react/jsx-one-expression-per-line': 'off',
     'react/button-has-type': 'off',
-    // Permanent preferances
+    // Permanent preferences
   }
 }

@@ -38,14 +38,18 @@ module.exports = {
     ],
   },
   devServer: {
-    // Tell the server where to serve content from. This is only necessary if you want to serve static files.  
+    // Tell the server where to serve content from.
+    // This is only necessary if you want to serve static files.
     contentBase: PATH.join(__dirname, 'public'),
     // Enable gzip compression for everything served
     compress: true,
     // Enable webpack's Hot Module Replacement feature
     hot: true,
-    // This option lets you precisely control what bundle information gets displayed. This can be a nice middle ground if you want some bundle information, but not all of it.
+    // This option lets you precisely control what bundle information gets
+    // displayed. This can be a nice middle ground if you want some bundle
+    // information, but not all of it.
     stats: 'minimal',
+    open: true,
     port: 8080,
   },
 };

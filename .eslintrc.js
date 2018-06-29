@@ -1,14 +1,17 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+  'env': {
+    'browser': true,
+    'es6': true,
+    'node': true
   },
-  "extends": [
-    "airbnb"
+  'extends': [
+    'airbnb'
   ],
-  "parser": "babel-eslint",
-  "rules": {
-    // Add own custom rules here as needed
+  'parser': 'babel-eslint',
+  'rules': {
+    // Disabled just while learning
+    'react/jsx-one-expression-per-line': 'off',
+    'react/button-has-type': 'off',
+    // Permanent preferances
   }
 }

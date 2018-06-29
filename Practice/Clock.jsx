@@ -1,40 +1,33 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 class Clock extends Component {
   state = {
-    date: new Date(),
     click: 107,
+    date: new Date(),
   }
+
 
   componentDidMount = () => {
     this.timerId = setInterval(() => {
-      this.setState({ date: new Date() });
-    });
+      this.setState({
+        date: new Date(),
+      });
+    }, 1000);
   }
 
   handleClick = () => {
-    this.setState(prevState => ({
+    this.setState((prevState => ({
       click: prevState.click + 1,
-    }));
+    })));
   }
 
   render() {
     const { click, date } = this.state;
-    if (click === 112) { throw new Error('I am definitely an error'); }
     return (
-      <Fragment>
-        <button
-          type="submit"
-          onClick={this.handleClick}
-        >
-          <h1>
-            {click}
-          </h1>
-          <h1>
-            {date.toLocaleTimeString()}
-          </h1>
-        </button>
-      </Fragment>
+      <button onClick={this.handleClick}>
+        <h1>{click}</h1>
+        <h1>{date.toLocaleTimeString()}</h1>
+      </button>
     );
   }
 }

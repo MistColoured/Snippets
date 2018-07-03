@@ -12,28 +12,41 @@ module.exports = {
     //     MyFiles: PATH.resolve(__dirname, 'src/')
     // }
   },
+  // Configuration regarding modules
   module: {
-    // configuration regarding modules
+    // Rules for modules (configure loaders, parser options, etc.)
     rules: [
-      // rules for modules (configure loaders, parser options, etc.)
       {
-        test: /\.jsx?$/,
-        exclude: [PATH.resolve(__dirname, 'node_modules')],
-        // these are matching conditions, each accepting a regular expression or string
-        // test and include have the same behavior, both must be matched
-        // exclude must not be matched (takes preferrence over test and include)
+        // These are matching conditions, each accepting a regular expression or string
+        // Test and include have the same behavior, both must be matched
+        // Exclude must not be matched (takes preferrence over test and include)
         // Best practices:
         // - Use RegExp only in test and for filename matching
-        // - Use arrays of absolute PATHs in include and exclude
+        // - Use arrays of absolute paths in include and exclude
         // - Try to avoid exclude and prefer include
+        test: /\.jsx?$/,
+        exclude: [
+          PATH.resolve(__dirname, 'node_modules'),
+        ],
+        // The loader which should be applied, it'll be resolved relative to the context
         loader: 'babel-loader',
-        // the loader which should be applied, it'll be resolved relative to the context
-        // -loader suffix is no longer optional in webpack2 for clarity reasons
-        // see webpack 1 upgrade guide
-        // options: {
-        //     presets: ["es2015"]
-        // },
-        // options for the loader
+        // Options for the loader
+        options: {
+          presets: [
+            '@babel/stage-3',
+            '@babel/env',
+            '@babel/react',
+          ],
+        },
+      },
+      {
+      // Disabled until I need to add CSS styling to my work again
+      // test: /\.scss$/,
+      // use: [
+      //   'style-loader',
+      //   'css-loader',
+      //   'sass-loader'
+      // ]
       },
     ],
   },

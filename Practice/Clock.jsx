@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 
 class Clock extends Component {
   state = {
-    click: 107,
+    click: 108,
     date: new Date(),
   }
-
 
   componentDidMount = () => {
     this.timerId = setInterval(() => {
@@ -16,9 +15,9 @@ class Clock extends Component {
   }
 
   handleClick = () => {
-    this.setState((prevState => ({
+    this.setState(prevState => ({
       click: prevState.click + 1,
-    })));
+    }));
   }
 
   render() {
